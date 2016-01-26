@@ -1,0 +1,38 @@
+
+<div class="container">
+    <div class="row logIn">
+        <h1><span class="animated fadeInLeftBig">You must</span><span class="animated fadeInRightBig"> login below!</span></h1><br><br>
+        <form role="form" ng-submit="vm.login()">
+            <div class="col-lg-9 log2 animated fadeInUp">
+                <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>
+                <div class="form-group">
+                    <label for="InputName">Username</label>
+                    <div class="input-group">
+                        <input type="text" ng-model="vm.user.username" class="form-control"  id="InputName" placeholder="Enter Username" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Inputpassword">Password</label>
+                    <div class="input-group">
+                        <input type="password"class="form-control" ng-model="vm.user.password"placeholder="Password" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+
+
+                <input type="submit" name="Login" id="submit" value="Login" class=" btn btn-info pull-right btn-block">
+
+            </div><br>
+        </form>
+    </div>
+    <div >
+        <form  action="index.html" method="post">
+            <div class="form-group">
+                <a href="/register"><input type="submit" id="regLbut" name="Register" value="Register" class="animated fadeInUp btn btn-primary pull-right btn-block"></a>
+            </div>
+        </form>
+
+    </div>
+</div>
