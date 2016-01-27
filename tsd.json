@@ -6,19 +6,19 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "serve-static/serve-static.d.ts": {
-      "commit": "7b3d5a6ea5acda4a81f71309f1cc62354e63b681"
+      "commit": "46719185c564694c5583c4b7ad94dbb786ecad46"
     },
     "mime/mime.d.ts": {
-      "commit": "7b3d5a6ea5acda4a81f71309f1cc62354e63b681"
+      "commit": "46719185c564694c5583c4b7ad94dbb786ecad46"
     },
     "express/express.d.ts": {
-      "commit": "7b3d5a6ea5acda4a81f71309f1cc62354e63b681"
+      "commit": "46719185c564694c5583c4b7ad94dbb786ecad46"
     },
     "mongoose/mongoose.d.ts": {
       "commit": "7b3d5a6ea5acda4a81f71309f1cc62354e63b681"
     },
     "node/node.d.ts": {
-      "commit": "7b3d5a6ea5acda4a81f71309f1cc62354e63b681"
+      "commit": "46719185c564694c5583c4b7ad94dbb786ecad46"
     },
     "angularjs/angular.d.ts": {
       "commit": "7b3d5a6ea5acda4a81f71309f1cc62354e63b681"
@@ -51,10 +51,10 @@
       "commit": "7b3d5a6ea5acda4a81f71309f1cc62354e63b681"
     },
     "express-unless/express-unless.d.ts": {
-      "commit": "7b3d5a6ea5acda4a81f71309f1cc62354e63b681"
+      "commit": "46719185c564694c5583c4b7ad94dbb786ecad46"
     },
     "express-jwt/express-jwt.d.ts": {
-      "commit": "7b3d5a6ea5acda4a81f71309f1cc62354e63b681"
+      "commit": "46719185c564694c5583c4b7ad94dbb786ecad46"
     },
     "passport/passport.d.ts": {
       "commit": "7b3d5a6ea5acda4a81f71309f1cc62354e63b681"

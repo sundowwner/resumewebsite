@@ -19,6 +19,21 @@ var App;
             controller: app.Controllers.UserController,
             controllerAs: "vm"
         })
+            .when("/blogcreate", {
+            templateUrl: "/templates/BlogCreate.html",
+            controller: app.Controllers.BlogCreateController,
+            controllerAs: "vm"
+        })
+            .when("/blog", {
+            templateUrl: "/templates/Blog.html",
+            controller: app.Controllers.BlogController,
+            controllerAs: "vm"
+        })
+            .when("/details/:id", {
+            templateUrl: "/templates/BlogDetails.html",
+            controller: app.Controllers.BlogDetailsController,
+            controllerAs: "vm"
+        })
             .otherwise({ redirectTo: '/' });
         $locationProvider.html5Mode(true);
         $httpProvider.interceptors.push('HTTPFactory');

@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row movedown">
+        <div class="col-md-12">
+
+            <div>
+                <h2>{{vm.blog.title}}</h2>
+                <h2>{{vm.blog.post}}</h2>
+                <h2>{{vm.blog.publish}}</h2>
+
+
+                <a ng-href="/details/{{b._id}}">Update</a>
+                <button ng-click="vm.delete(b._id)">Delete</button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>

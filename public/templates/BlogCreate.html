@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row movedown">
+        <div class="col-md-12">
+
+            <form ng-submit = "vm.createBlog()">
+                <label>Title: </label>
+                <input ng-model = "vm.blog.title" type = "text" placeholder = "Title">
+                <br><br>
+                <label>Post: </label>
+                <input ng-model = "vm.blog.post" type = "text" placeholder = "Post">
+                <br><br>
+                <label>Publish: </label>
+                <input ng-model = "vm.blog.publish" type = "number" placeholder = "Pub Year">
+                <br><br>
+                <button type = "submit">Submit</button>
+            </form>
+
+
+        </div>
+    </div>
+</div>

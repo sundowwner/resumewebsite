@@ -12,6 +12,8 @@ const app = express();
 ///////////////////////////////
 import mongoose = require('mongoose');
 require('./models/users');
+require("./models/blogs");
+require("./models/comments");
 require('./config/passport');
 
 // if (process.env.NODE_ENV === 'test')
@@ -35,7 +37,11 @@ app.use(passport.initialize());
 
 
 let userRoutes = require('./routes/userRoutes');
+let blogRoutes = require("./routes/blogRoutes");
+let commentRoutes = require("./routes/commentRoutes");
+app.use("/blogs", blogRoutes);
 app.use('/users', userRoutes);
+app.use("/api/comments", commentRoutes);
 
 
 app.use(express.static('./public'));

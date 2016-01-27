@@ -4,7 +4,8 @@ var app;
     var Services;
     (function (Services) {
         var HomeService = (function () {
-            function HomeService() {
+            function HomeService($resource) {
+                this.$resource = $resource;
             }
             return HomeService;
         })();

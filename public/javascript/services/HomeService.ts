@@ -2,7 +2,10 @@
 namespace app.Services {
   export class HomeService {
 
-    constructor() {
+
+    constructor(
+        private $resource: ng.resource.IResourceService
+    ) {
 
     }
   }

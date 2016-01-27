@@ -5,6 +5,12 @@
     background-color: lavender;
     height: 1000px;
     position: absolute;
+    width: 65%;
+    margin-left: -32px;
+}
+#cbP{
+    margin-left: 290px;
+    margin-top: -45px
 }
 .banner{
     height: 10px;
@@ -14,6 +20,9 @@
     margin-right: 291px;
 }
 #logStatus{
-    margin-left: 600px;
+    margin-left: 500px;
     margin-top: 15px;
+}
+.movedown{
+    margin-top: 100px;
 }

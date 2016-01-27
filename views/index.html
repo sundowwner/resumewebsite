@@ -39,14 +39,14 @@
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li><a href="/resume">Resume</a></li>
-        <li ng-hide="gc.status.username !== null"><a href="/login">Login</a></li>
         <li ng-hide="gc.status.username !== null"><a href="/register">Register</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li ng-hide="gc.status.username !== null"><a href="/login">Login</a></li>
         <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact</a></li>
         <li ng-show="gc.status.username !== null"><button style="margin-top:10px" ng-click="gc.logout()">Logout</button></li>
                     <li ng-show="gc.status.username !== null" id="logStatus">Logged in as: {{gc.status.username | uppercase }}</li>
       </ul>
-    
+
     </nav>
   </div>
 </header>
@@ -54,7 +54,7 @@
 </div>
 <div class="container" >
     <div class="row">
-        <div class="col-md-12 main" >
+        <div class="col-md-12 main">
 
         </div>
     </div>
@@ -72,10 +72,14 @@
     <script src="/javascript/app.js"></script>
     <script src="/javascript/services/HomeService.js"></script>
     <script src="/javascript/services/UserService.js"></script>
+    <script src="/javascript/services/BlogService.js"></script>
     <script src="/javascript/services/HTTPFactory.js"></script>
     <script src="/javascript/controllers/HomeController.js"></script>
     <script src="/javascript/controllers/UserController.js"></script>
     <script src="/javascript/controllers/GlobalController.js"></script>
+    <script src="/javascript/controllers/BlogCreateController.js"></script>
+    <script src="/javascript/controllers/BlogController.js"></script>
+    <script src="/javascript/controllers/BlogDetailsController.js"></script>
 </body>
 
 </html>
