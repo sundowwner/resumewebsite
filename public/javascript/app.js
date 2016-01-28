@@ -34,6 +34,31 @@ var App;
             controller: app.Controllers.BlogDetailsController,
             controllerAs: "vm"
         })
+            .when("/update/:id", {
+            templateUrl: "/templates/BlogUpdate.html",
+            controller: app.Controllers.BlogUpdateController,
+            controllerAs: "vm"
+        })
+            .when("/commentUpdate/:id", {
+            templateUrl: "/templates/CommentUpdate.html",
+            controller: app.Controllers.CommentUpdateController,
+            controllerAs: "vm"
+        })
+            .when("/contact", {
+            templateUrl: "/templates/Contact.html",
+            controller: app.Controllers.ContactController,
+            controllerAs: "vm"
+        })
+            .when("/resume", {
+            templateUrl: "/templates/Resume.html",
+            controller: app.Controllers.ResumeController,
+            controllerAs: "vm"
+        })
+            .when("/tagCreate/:id", {
+            templateUrl: "/templates/TagCreate.html",
+            controller: app.Controllers.TagCreateController,
+            controllerAs: "vm"
+        })
             .otherwise({ redirectTo: '/' });
         $locationProvider.html5Mode(true);
         $httpProvider.interceptors.push('HTTPFactory');

@@ -1,6 +1,24 @@
 #body{
     background-image: url(/images/citylights.jpeg);
 }
+#blogBody,#blogDbody{
+    background-color:white;
+    position:absolute;
+    width: 1237px;
+    margin-left: 335px;
+}
+#tagC{
+    position:absolute;
+    margin-left: 668px;
+}
+
+#movedowncomment{
+    margin-left: 530px;
+}
+#tag{
+    margin-left: 445px;
+}
+
 .main{
     background-color: lavender;
     height: 1000px;
@@ -11,6 +29,7 @@
 #cbP{
     margin-left: 290px;
     margin-top: -45px
+
 }
 .banner{
     height: 10px;
@@ -24,5 +43,6 @@
     margin-top: 15px;
 }
 .movedown{
+
     margin-top: 100px;
 }

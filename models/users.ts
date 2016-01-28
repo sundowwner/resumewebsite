@@ -8,8 +8,9 @@ let UserSchema = new mongoose.Schema({
   email: { type: String, unique: true, lowercase: true },
   passwordHash: String,
   salt: String,
-  books: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Book' }],
-  comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }]
+  blogs: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Blog' }],
+  comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }],
+  tags: [{ type: mongoose.Schema.Types.ObjectId, ref: "Tag"}]
 });
 
 UserSchema.method('setPassword', function(password) {

@@ -16,6 +16,10 @@ namespace app.Services{
             //POST: /blogs
             return this.BlogResource.save(blog).$promise;
         }
+        public updateBlog(blog) {
+            //PUT: /blog/{{blog._id}}
+            return this.BlogResource.update({ id:blog._id }, blog).$promise;
+        }
 
         public deleteBlog(blog) {
             //DELETE: /blogs_id={{id}}

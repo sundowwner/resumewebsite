@@ -14,7 +14,9 @@ import mongoose = require('mongoose');
 require('./models/users');
 require("./models/blogs");
 require("./models/comments");
+require("./models/tags");
 require('./config/passport');
+
 
 // if (process.env.NODE_ENV === 'test')
 //   mongoose.connect("mongodb://localhost/bookStore-test");
@@ -39,8 +41,10 @@ app.use(passport.initialize());
 let userRoutes = require('./routes/userRoutes');
 let blogRoutes = require("./routes/blogRoutes");
 let commentRoutes = require("./routes/commentRoutes");
+let tagRoutes = require("./routes/tagRoutes");
 app.use("/blogs", blogRoutes);
 app.use('/users', userRoutes);
+app.use("/tags", tagRoutes);
 app.use("/api/comments", commentRoutes);
 
 
@@ -71,9 +75,10 @@ app.use(function(req, res, next) {
 
 app.use(function(err: any, req, res, next) {
   res.status(err.status || 500);
-  if (err.name = 'CastError') err.message = 'Invalid ID';
+  //if (err.name = 'CastError') err.message = 'Invalid ID';
   // Don't leak stack trace if not in development
   let error = (app.get('env') === 'development') ? err : {};
+  console.log(err)
   res.send({
     message: err.message,
     error: error

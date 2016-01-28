@@ -6,6 +6,7 @@ let router = express.Router();
 let Blog = mongoose.model("Blog");
 let User = mongoose.model("User");
 let Comment = mongoose.model("Comment");
+let Tag = mongoose.model("Tag");
 let auth = jwt ({
 
     userProperty: "payload",
@@ -16,6 +17,7 @@ let auth = jwt ({
 //GET: /blogs
 router.get("/", (req,res,next) => {
     Blog.find({})
+    .populate("tag")
     .exec((err, blogs) => {
         if (err) return next(err);
         res.json(blogs);
@@ -29,11 +31,13 @@ router.get("/:id", (req,res,next) => {
     .populate("comments")
     .exec((err, blog) => {
         Comment.populate(blog.comments, {path: "createdBy", select: "username email"}, (err, out) => {
+        //    Tag.populate(blog.tag, { path: "tagmessage" }, (err, final) => {
             if(err) return next(err);
             if(!blog) return next({ message: "Could not find your blog."});
             blog.comments = blog.comments.filter((comment) => (comment.deleted === null));
             res.send(blog);
         });
+    //    });
     });
 });
 

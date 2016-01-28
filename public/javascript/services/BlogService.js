@@ -19,6 +19,9 @@ var app;
             BlogService.prototype.saveBlog = function (blog) {
                 return this.BlogResource.save(blog).$promise;
             };
+            BlogService.prototype.updateBlog = function (blog) {
+                return this.BlogResource.update({ id: blog._id }, blog).$promise;
+            };
             BlogService.prototype.deleteBlog = function (blog) {
                 return this.BlogResource.delete({ _id: blog._id }).$promise;
             };

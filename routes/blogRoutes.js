@@ -6,12 +6,14 @@ var router = express.Router();
 var Blog = mongoose.model("Blog");
 var User = mongoose.model("User");
 var Comment = mongoose.model("Comment");
+var Tag = mongoose.model("Tag");
 var auth = jwt({
     userProperty: "payload",
     secret: process.env.JWT_SECRET
 });
 router.get("/", function (req, res, next) {
     Blog.find({})
+        .populate("tag")
         .exec(function (err, blogs) {
         if (err)
             return next(err);

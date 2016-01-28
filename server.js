@@ -10,6 +10,7 @@ var mongoose = require('mongoose');
 require('./models/users');
 require("./models/blogs");
 require("./models/comments");
+require("./models/tags");
 require('./config/passport');
 mongoose.connect(process.env.MONGO_URL);
 app.set('views', './views');
@@ -24,8 +25,10 @@ app.use(passport.initialize());
 var userRoutes = require('./routes/userRoutes');
 var blogRoutes = require("./routes/blogRoutes");
 var commentRoutes = require("./routes/commentRoutes");
+var tagRoutes = require("./routes/tagRoutes");
 app.use("/blogs", blogRoutes);
 app.use('/users', userRoutes);
+app.use("/tags", tagRoutes);
 app.use("/api/comments", commentRoutes);
 app.use(express.static('./public'));
 app.use('/scripts', express.static('bower_components'));
@@ -46,9 +49,8 @@ app.use(function (req, res, next) {
 });
 app.use(function (err, req, res, next) {
     res.status(err.status || 500);
-    if (err.name = 'CastError')
-        err.message = 'Invalid ID';
     var error = (app.get('env') === 'development') ? err : {};
+    console.log(err);
     res.send({
         message: err.message,
         error: error

@@ -1,0 +1,29 @@
+
+
+<div class="container">
+    <div class="row" >
+        <div class="col-lg-9 form-group ">
+
+            <form ng-submit = "vm.update()">
+                <label>Title: </label>
+                <input ng-model = "vm.blog.title" type = "text" placeholder = "Title">
+                <br><br>
+                <label>Post: </label>
+                <input ng-model = "vm.blog.post" type = "text" placeholder = "Title">
+                <br><br>
+                <label>Publish: </label>
+                <input ng-model = "vm.blog.publish" type = "text" placeholder = "Title">
+                <br><br>
+
+
+                <button type ="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" >
+    <div class="row">
+        <div class="col-md-4 entP">
+
+            <!-- <h2 ng-show="gc.status.username !== null" class="sign1 animated fadeInUp">Enter Pin Info</h2><br>
+            <h2 ng-hide="gc.status.username !== null">Login to add a PIN to the <span style="font-weight:bold;font-size:35px">{{vm.board.name}}</span> PinBoard </h2> -->

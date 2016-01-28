@@ -1,0 +1,19 @@
+
+<div class="container" id="tagC">
+    <div class="row movedown">
+
+<label>Tag</label>
+  <form ng-submit="vm.addTag()">
+    <input type="text" ng-model="vm.tagmessage" />
+    <button type="submit">Submit</button>
+  </form>
+
+
+
+<div ng-repeat="c in vm.tag.tagmessage">
+  <p>{{c}}</p>
+  <button type="button" ng-click="vm.deleteTag(c)">Delete</button>
+</div>
+
+    </div>
+</div>

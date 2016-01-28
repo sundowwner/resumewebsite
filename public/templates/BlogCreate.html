@@ -1,21 +1,36 @@
-<div class="container">
-    <div class="row movedown">
-        <div class="col-md-12">
 
-            <form ng-submit = "vm.createBlog()">
-                <label>Title: </label>
-                <input ng-model = "vm.blog.title" type = "text" placeholder = "Title">
-                <br><br>
-                <label>Post: </label>
-                <input ng-model = "vm.blog.post" type = "text" placeholder = "Post">
-                <br><br>
-                <label>Publish: </label>
-                <input ng-model = "vm.blog.publish" type = "number" placeholder = "Pub Year">
-                <br><br>
-                <button type = "submit">Submit</button>
-            </form>
+<div class="container movedown" id="blogDet">
+    <div class="row">
+        <h2 class=" animated fadeInUp">Create your blog below</h2><br>
+        <form role="form" ng-submit = "vm.createBlog()">
+            <div class="col-lg-9  animated fadeInUp">
+
+                <div class="form-group">
+                    <label>Title</label>
+                    <div class="input-group">
+                         <input type="text" ng-model = "vm.blog.title" class="form-control"   placeholder="Title">
+                        <span class="input-group-addon"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Post</label>
+                    <div class="input-group">
+                        <textarea type="text" ng-model = "vm.blog.post" class="form-control"   placeholder="Post" rows="5"></textarea>
+                        <span class="input-group-addon"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <!-- <label >Published Date</label>
+                    <div class="input-group">
+                        <input    class="form-control" ng-model = "vm.blog.dateCreated" placeholder="publish">
+                        <span class="input-group-addon"></span>
+                    </div> -->
+                </div>
 
 
-        </div>
+                <input type="submit" name="submit" id="submit" value="Post Blog" class="btn btn-info pull-right btn-block">
+            </div>
+        </form>
+
     </div>
 </div>

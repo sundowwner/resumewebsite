@@ -1,120 +1,101 @@
-<!-- <div class="container">
-    <div class="row movedown">
+<div class="container" id="blogBody">
+<div id="masthead" >
+    <div class="container">
+        <div class="row movedown">
+            <div class="col-md-7">
+                <h1>My Blog
+                    <!-- <p class="lead">Catchy Subtitle Here</p> -->
+                </h1>
+            </div>
+            <div class="col-md-5">
+                <div>
+                    <div class="row">
+                        <button id="cbP" type="button" name="button" class="btn btn-info btn-primary"><a href="/blogcreate" style="color:white;">Create Blog Post</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /cont -->
+</div>
+
+<div class="container">
+    <div class="row ">
+
         <div class="col-md-12">
 
-            <div class="" ng-repeat="b in vm.blogs">
-                <h1><a ng-href="/details/{{b._id}}">{{b.title}}</a></h1>
-                <h3>{{b.post}}</h3>
-                <h3>{{b.publish}}</h3>
+            <div class="panel">
+                <div class="panel-body">
 
+                    <!--/stories-->
+                    <div class="row" ng-repeat="b in vm.blogs">
+                        <br>
+                        <div class="col-md-2 col-sm-3 text-center">
+                            <a class="story-img" href="#"><img src="//placehold.it/100" style="width:100px;height:100px" class="img-circle"></a>
+                        </div>
+                        <div  class="col-md-10 col-sm-9">
+                            <h1><a ng-href="/details/{{b._id}}">{{b.title}}</a></h1>
+    <div class="row">
+        <div class="col-xs-9">
+            <p>{{b.post}}</p>
+            <p class="lead"><button class="btn btn-default">Read More</button></p>
 
-            </div>
-            <div class="">
-                <button  type="button" name="button"><a href="/blogcreate">Create Blog Post</a></button>
+    <span><a id="tag" ng-href="/tagCreate/{{b._id}}" class="label label-default">Add Tag</a> </span>
+            <p ng-repeat="t in b.tag" class="pull-right"> <span ng-href="/tagCreate/{{b._id}}" class="label label-default">{{t.tagmessage}}</span></p>
 
-            </div>
-
+            <ul class="list-inline"><li><a href="#">{{b.dateCreated | date: short}}</a></li><li><a ng-href="/details/{{b._id}}"><i class="glyphicon glyphicon-comment"></i><span> </span><span>{{b.comments.length}}  </span>Comments</a></li></ul>
         </div>
+
+        <div class="col-xs-3"></div>
     </div>
-</div> -->
-<div id="masthead" >
-  <div class="container">
-    <div class="row movedown">
-      <div class="col-md-7">
-        <h1>Blog
-          <p class="lead">Catchy Subtitle Here</p>
-        </h1>
-      </div>
-      <div class="col-md-5">
-        <div>
-          <div class="row">
-            <button id="cbP" type="button" name="button"><a href="/blogcreate">Create Blog Post</a></button>
-          </div>
-        </div>
-      </div>
+                            <br><br>
+                            <hr>
+                        </div>
+                    </div>
+
+
+                    <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
+
+                </div>
+            </div>
+
+        </div><!--/col-12-->
     </div>
-  </div><!-- /cont -->
-
-
-</div>
-<div class="container">
-  <div class="row movedown">
-
-    <div class="col-md-12">
-
-      <div class="panel">
-        <div class="panel-body">
-
-
-          <!--/stories-->
-		  <div class="row" ng-repeat="b in vm.blogs">
-            <br>
-            <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-img" href="#"><img src="//placehold.it/100" style="width:100px;height:100px" class="img-circle"></a>
-            </div>
-            <div  class="col-md-10 col-sm-9">
-             <h1><a ng-href="/details/{{b._id}}">{{b.title}}</a></h1>
-              <div class="row">
-                <div class="col-xs-9">
-                  <p>{{b.post}}</p>
-                  <p class="lead"><button class="btn btn-default">Read More</button></p>
-                  <p class="pull-right"><span class="label label-default">keyword</span> <span class="label label-default">tag</span> <span class="label label-default">post</span></p>
-                  <ul class="list-inline"><li><a href="#">2 Days Ago</a></li><li><a href="#"><i class="glyphicon glyphicon-comment"></i> 4 Comments</a></li></ul>
-                  </div>
-
-                <div class="col-xs-3"></div>
-              </div>
-              <br><br>
-              <hr>
-            </div>
-          </div>
-
-
-          <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
-
-
-        </div>
-      </div>
-
-
-
-   	</div><!--/col-12-->
-  </div>
 </div>
 
 
 
 
 <div class="container" id="footer">
-  <div class="row">
-    <div class="col col-sm-12">
+    <div class="row">
+        <div class="col col-sm-12">
 
-      <h1>Follow Us</h1>
-      <div class="btn-group">
-       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
-	   <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
-	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
-      </div>
+            <h1>Follow Us</h1>
+            <div class="btn-group">
+                <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+                <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+                <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+            </div>
 
+        </div>
     </div>
-  </div>
 </div>
 
 <hr>
 
 <footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <ul class="list-inline">
-          <li><i class="icon-facebook icon-2x"></i></li>
-          <li><i class="icon-twitter icon-2x"></i></li>
-          <li><i class="icon-google-plus icon-2x"></i></li>
-          <li><i class="icon-pinterest icon-2x"></i></li>
-        </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <ul class="list-inline">
+                    <li><i class="icon-facebook icon-2x"></i></li>
+                    <li><i class="icon-twitter icon-2x"></i></li>
+                    <li><i class="icon-google-plus icon-2x"></i></li>
+                    <li><i class="icon-pinterest icon-2x"></i></li>
+                </ul>
 
-      </div>
+            </div>
 
+        </div>
     </div>
-  </div>
 </footer>
+</div>
