@@ -1,19 +1,19 @@
-
-<div class="container" id="tagC">
-    <div class="row movedown">
-
-<label>Tag</label>
-  <form ng-submit="vm.addTag()">
-    <input type="text" ng-model="vm.tagmessage" />
-    <button type="submit">Submit</button>
-  </form>
-
-
-
-<div ng-repeat="c in vm.tag.tagmessage">
-  <p>{{c}}</p>
-  <button type="button" ng-click="vm.deleteTag(c)">Delete</button>
-</div>
-
+<div class="container">
+    <div class="row movedown regSign">
+        <h2 class="regSign"><span class="animated fadeInLeftBig">Go ahead &</span> <span class="animated fadeInRightBig">tag this post</span></h2><br>
+        <div class="col-lg-9 animated fadeInUp">
+            <form role="form" ng-submit="vm.addTag()">
+                <div class="form-group regSign">
+                    <label for="InputName">TAG</label>
+                    <div class="input-group">
+                        <textarea type="text" ng-model="vm.tagmessage" class="form-control"  id="InputName" placeholder="Enter Tag" ></textarea>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                    <div class="">
+                        <input type="submit" name="submit" id="submit" value="Submit" class=" regSign btn btn-info pull-right btn-block">
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

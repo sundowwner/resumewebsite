@@ -20,7 +20,7 @@ namespace app.Controllers {
         }
         public deleteComment(comment)   {
             this.CommentService.deleteComment(comment).then((res) => {
-                this.blog.comments.splice(this.blog.comment.indexOf(comment), 1);
+                this.blog.comments.splice(this.blog.comments.indexOf(comment), 1);
             });
         }
         public addTag() {

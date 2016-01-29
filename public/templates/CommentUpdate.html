@@ -1,14 +1,20 @@
 
-<div class="container movedown" id="movedowncomment">
-    <div class="row">
-        <div class="col-lg-9 form-group">
-            <form ng-submit = "vm.update()">
-                <label>Update your comment below: </label><br>
-                <textarea class="form-control" ng-model = "vm.comment.message" type = "text" placeholder = "comments" rows="3" cols="100"></textarea>
-                <br>
-                <button type = "submit">Submit changes</button>
+<div class="container id="comBody"">
+    <div class="row movedown regSign">
+        <h2 class="regSign"><span class="animated fadeInLeftBig">Update your comment </span> <span class="animated fadeInRightBig">changes below</span></h2><br>
+        <div class="col-lg-9 animated fadeInUp">
+            <form role="form" ng-submit = "vm.update()">
+                <div class="form-group regSign">
+                    <label for="InputName">Comments</label>
+                    <div class="input-group">
+                        <textarea type="text" ng-model = "vm.comment.message" class="form-control"  id="InputName" placeholder="Comment below" ></textarea>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                    <div class="">
+                        <input type="submit" name="submit" id="submit" value="Submit" class=" regSign btn btn-info pull-right btn-block">
+                    </div>
+                </div>
             </form>
         </div>
     </div>
-
 </div>

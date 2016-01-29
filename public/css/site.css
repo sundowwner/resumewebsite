@@ -1,15 +1,26 @@
 #body{
     background-image: url(/images/citylights.jpeg);
 }
-#blogBody,#blogDbody{
+#blogBody,#blogDbody,#comBody{
     background-color:white;
     position:absolute;
     width: 1237px;
     margin-left: 335px;
+    padding-bottom: 500px;
+}
+.regSign {
+    margin-left: 100px;
 }
 #tagC{
     position:absolute;
     margin-left: 668px;
+}
+   {
+    color: black;
+}
+.btn{
+    
+    font-weight: bold;
 }
 
 #movedowncomment{
@@ -21,7 +32,7 @@
 
 .main{
     background-color: lavender;
-    height: 1000px;
+    height: 1500px;
     position: absolute;
     width: 65%;
     margin-left: -32px;

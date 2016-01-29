@@ -26,7 +26,7 @@ var app;
             BlogDetailsController.prototype.deleteComment = function (comment) {
                 var _this = this;
                 this.CommentService.deleteComment(comment).then(function (res) {
-                    _this.blog.comments.splice(_this.blog.comment.indexOf(comment), 1);
+                    _this.blog.comments.splice(_this.blog.comments.indexOf(comment), 1);
                 });
             };
             BlogDetailsController.prototype.addTag = function () {
