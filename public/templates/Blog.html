@@ -1,6 +1,6 @@
 <div class="container" id="blogBody">
 <div id="masthead" >
-    <div class="container">
+    <div class="container panelTop">
         <div class="row movedown">
             <div class="col-md-7">
                 <h1>My Blog
@@ -30,7 +30,7 @@
                     <div class="row" ng-repeat="b in vm.blogs">
                         <br>
                         <div class="col-md-2 col-sm-3 text-center">
-                            <a class="story-img" href="#"><img src="//placehold.it/100" style="width:100px;height:100px" class="img-circle"></a>
+                            <!-- <a class="story-img" href="#"><img src="//placehold.it/100" style="width:100px;height:100px" class="img-circle"></a> -->
                         </div>
                         <div  class="col-md-10 col-sm-9">
                             <h1><a ng-href="/details/{{b._id}}">{{b.title}}</a></h1>
