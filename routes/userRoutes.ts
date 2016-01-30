@@ -21,7 +21,7 @@ router.post('/login', function(req, res, next) {
   if(!req.body.username || !req.body.password) return res.status(400).send('Please fill out every field');
   passport.authenticate('local', function(err, user, info) {
     if(err) return next(err);
-    if(user) return res.json({ token: user.generateJWT() });
+    if (user) return res.json({ token: user.generateJWT() });
     return res.status(400).send(info);
   }) (req, res, next);
 });

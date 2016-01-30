@@ -3,22 +3,24 @@
 }
 #blogBody,#blogDbody,#comBody{
 
-    position: absolute;
+    /*position: absolute;*/
     width: 1170px;
     margin-left: 368px;
     padding-bottom: 100px
 }
 .regSign {
-    margin-left: 100px;
+    margin-left: 139px;
 }
 .panel{
     width: 1170px;
     margin-left: -31px;
+    background-color: GhostWhite;
+
 }
 .panelTop{
     width: 1170px;
     margin-left: -16px;
-    background-color: white;
+    background-color: GhostWhite;
 }
 #tagC{
     position:absolute;
@@ -43,15 +45,18 @@
 }
 
 .main{
-    background-color: lavender;
+    background-color: GhostWhite;
     height: 1500px;
     position: absolute;
     width: 61.5%;
 
 }
+.blogh{
+    margin-left: 100px;
+}
 #cbP{
     margin-left: 290px;
-    margin-top: -45px
+    margin-top: -26px
 
 }
 .banner{
@@ -79,6 +84,11 @@
 #myBtn  {
     margin-top: 12px;
 }
+.pic{
+    width: 255px;
+    margin-left: -16px;
+    margin-top: -21px;
+}
 
 body    {
     background-image:url("citylights.jpeg");
@@ -88,9 +98,11 @@ body    {
 }
 .nV {
     height: 48px;
+
 }
 .nVBtns{
     margin-top: 6px;
+
 }
 .nVb    {
     background-color:#256a8c;
@@ -223,21 +235,7 @@ body    {
 
 
 
-/*.carousel   {
-background-color: sienna;
-}
-div.carousel-inner img{
-margin: 0 auto;
-}
-.abtV   {
-font-weight: bold;
-font-size: 23px;
-text-decoration:underline;
-color: black;
-/*color: Crimson;*/
-/*background-color:deepskyblue;*/
-/*border-bottom: 2px solid white;*/
-}*/
+
 .aboutP {
     font-family: arial;
     color: black;
@@ -245,7 +243,7 @@ color: black;
     font-size: 130%;
 }
 .synopsis, .resume  {
-    background-color:Lavender;
+    background-color: GhostWhite;
 }
 .sum    {
     margin-top: 35px;
@@ -259,85 +257,9 @@ color: black;
     font-size: 18px;
 }
 
-.letsConnect    {
-    border-bottom: 2px solid RoyalBlue;
-    background-color: PowderBlue;
-}
-.badgeM{
-    margin-left: -67px;
-}
-.social {
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-    font-size: 15px;
-}
 
-
-.social ul {
-    margin: 0;
-    padding: 5px;
-}
-.fa-google-plus{
-
-}
-
-.social ul li {
-    margin: 7px;
-    margin-left: 55px;
-    margin-top: 13px;
-    list-style: none outside none;
-    display: inline-block;
-}
-.social i {
-    width: 40px;
-    height: 40px;
-    color: #FFF;
-    background-color: #909AA0;
-    font-size: 22px;
-    text-align:center;
-    padding-top: 12px;
-    border-radius:50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -o-border-radius: 50%;
-    transition: all ease 0.3s;
-    -moz-transition: all ease 0.3s;
-    -webkit-transition: all ease 0.3s;
-    -o-transition: all ease 0.3s;
-    -ms-transition: all ease 0.3s;
-}
-.social i:hover {
-color: #FFF;
-text-decoration: none;
-transition: all ease 0.3s;
--moz-transition: all ease 0.3s;
--webkit-transition: all ease 0.3s;
--o-transition: all ease 0.3s;
--ms-transition: all ease 0.3s;
-}
-.social .fa-twitter{ /* round twitter icon*/
-    background: #00ABE3;
-}
-
-.social .fa-google-plus { /* round google plus icon*/
-    background: #e64522;
-}
-
-.social .fa-github { /* round github icon*/
-    background: #343434;
-}
-.social .fa-linkedin { /* round linkedin icon*/
-    background: #0094BC;
-}
-.social .fa-stack-overflow{ /* round stack overflow icon*/
-    background: #FEA501;
-}
-.social .fa-instagram { /* round instagram icon*/
-    background: #375989;
-}
 .touch {
-    background-color:Lavender;
+    background-color:GhostWhite;
 }
 .printO{
     margin-top: 59px;
@@ -421,5 +343,5 @@ ul.skList li{
     margin-bottom: 30px;
 }
 .mySelf{
-    margin-top: 2px;
+    margin-top: 1px;
 }

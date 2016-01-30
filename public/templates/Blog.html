@@ -3,7 +3,7 @@
     <div class="container panelTop">
         <div class="row movedown">
             <div class="col-md-7">
-                <h1>My Blog
+                <h1 class="blogh">My Blog
                     <!-- <p class="lead">Catchy Subtitle Here</p> -->
                 </h1>
             </div>
@@ -39,10 +39,11 @@
             <p>{{b.post}}</p>
             <p class="lead"><button class="btn btn-default">Read More</button></p>
 
-    <span><a id="tag" ng-href="/tagCreate/{{b._id}}" class="label label-default">Add Tag</a> </span>
+
             <p ng-repeat="t in b.tag" class="pull-right"> <span ng-href="/tagCreate/{{b._id}}" class="label label-default">{{t.tagmessage}}</span></p>
 
             <ul class="list-inline"><li><a href="#">{{b.dateCreated | date: short}}</a></li><li><a ng-href="/details/{{b._id}}"><i class="glyphicon glyphicon-comment"></i><span> </span><span>{{b.comments.length}}  </span>Comments</a></li></ul>
+            <span><a id="tag" ng-href="/tagCreate/{{b._id}}" class="label label-default">Add Tag</a> </span>
         </div>
 
         <div class="col-xs-3"></div>
