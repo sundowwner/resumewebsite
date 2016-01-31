@@ -1,7 +1,7 @@
 'use strict';
 var App;
 (function (App) {
-    angular.module('app', ['ngRoute', 'ngResource', "ui.bootstrap", 'ngToast', "jerryhsia.minieditor"])
+    angular.module('app', ['ngRoute', 'ngResource', "ui.bootstrap", 'ngToast', "angularTrix", "wysiwyg.module", "textAngular"])
         .config(function ($routeProvider, $locationProvider, $httpProvider) {
         $routeProvider
             .when('/', {

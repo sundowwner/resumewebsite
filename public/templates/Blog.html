@@ -34,12 +34,14 @@
                             <!-- <a class="story-img" href="#"><img src="//placehold.it/100" style="width:100px;height:100px" class="img-circle"></a> -->
                         </div>
                         <div  class="col-md-10 col-sm-9">
-                            <h1><a ng-href="/details/{{b._id}}">{{b.title}}</a></h1>
+                            <h1><a ng-hide="gc.status.username == null" ng-href="/details/{{b._id}}">{{b.title}}</a></h1>
+                            <h1><a ng-show="gc.status.username == null">{{b.title}}</a></h1>
+
     <div class="row blogPost">
         <div class="col-xs-9 pRow" ng-init="limit = 200; moreShown = false">
             <p class="pStyle" >{{b.post | limitTo: limit}}</p>
-            <p ng-hide="text.length > limit" href ng-click="limit=text.length; moreShown = true" class="lead"><button ng-if="!moreShown"  class="btn btn-default">Read More</button></p>
-            <p ng-show="moreShown" href ng-click="limit= 200; moreShown = false" class="lead"><button ng-if="moreShown" class="btn btn-default">Read Less</button></p>
+            <p ng-show="b.post.length > limit" href ng-click="limit=b.post.length; moreShown = true" class="lead"><button ng-if="!moreShown"  class="btn btn-default">Read More</button></p>
+            <p ng-hide="!moreShown" href ng-click="limit= 200; moreShown = false" class="lead"><button ng-if="moreShown" class="btn btn-default">Read Less</button></p>
 
 
             <p ng-repeat="t in b.tag" class="pull-right"> <span ng-href="/tagCreate/{{b._id}}" class="label label-default">{{t.tagmessage}}</span></p>
@@ -48,7 +50,8 @@
             <ul class="list-inline">
                 <li><a href="#">{{b.dateCreated | date: short}}</a></li>
                 <li><a ng-href="/details/{{b._id}}"><i class="glyphicon glyphicon-comment"></i><span> </span><span>{{b.comments.length}}  </span>Comments</a></li>
-                <span><a id="tag" ng-href="/tagCreate/{{b._id}}" class="btn btn-xs btn-info btn-primary">Add Tag</a></span>
+                <span><a id="tag" ng-hide="gc.status.username == null" ng-href="/tagCreate/{{b._id}}" class="btn btn-xs btn-info btn-primary">Add Tag</a></span>
+                <span><a id="tag" ng-show="gc.status.username == null" class="btn btn-xs btn-info btn-primary">Add Tag</a></span>
             </ul>
 
         </div>

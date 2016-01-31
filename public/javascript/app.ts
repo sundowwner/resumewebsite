@@ -1,6 +1,6 @@
 'use strict';
 namespace App {
-  angular.module('app', ['ngRoute', 'ngResource',"ui.bootstrap",'ngToast',"jerryhsia.minieditor"])
+  angular.module('app', ['ngRoute', 'ngResource',"ui.bootstrap",'ngToast',"angularTrix","wysiwyg.module","textAngular"])
   .config((
     $routeProvider: ng.route.IRouteProvider,
     $locationProvider: ng.ILocationProvider,

@@ -51,8 +51,8 @@
                             <a ng-show="gc.status.username == c.createdBy.username" ng-href="/commentUpdate/{{c._id}}" class="btn  btn-info">Update</a>
                             <button type="button" ng-show="gc.status.username == c.createdBy.username" ng-click="vm.deleteComment(c)" class="btn btn-danger">Delete</button><br><br>
                         </div><br><br>
-
-                        <label><span class="animated fadeInLeftBig regSign" style="display:inline-block">Please add your comments</span> <span class="animated fadeInRightBig" style="display:inline-block">to this post</span></label>
+                        <div ng-hide="gc.status.username == null">
+                        <label><span class="regSign">Please add your comments</span> <span>to this post</span></label>
                         <form role="form" ng-submit="vm.addComment()">
                             <div class="form-group regSign">
                                 <div class="input-group">
@@ -64,6 +64,8 @@
                                 </div>
                             </div>
                         </form>
+                    </div>
+                    <h2 ng-show="gc.status.username == null">Please login to post a comment!</h2>
                     </div>
                 </div>
             </div>

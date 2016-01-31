@@ -13,6 +13,7 @@ namespace app.Controllers {
         constructor(
             private BlogService: app.Services.BlogService,
             private $location: ng.ILocationService
+
         ){
 
         }
