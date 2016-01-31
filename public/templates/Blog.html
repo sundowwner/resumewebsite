@@ -10,7 +10,8 @@
             <div class="col-md-5">
                 <div>
                     <div class="row">
-                        <button id="cbP" type="button" name="button" class="btn btn-info btn-primary"><a href="/blogcreate" style="color:white;">Create Blog Post</a></button>
+                        <button  id="cbP" ng-hide="gc.status.username == null" type="button" name="button" class="btn btn-info btn-primary"><a href="/blogcreate" style="color:white;">Create Blog Post</a></button>
+                        <button id="cbP" ng-show="gc.status.username == null" type="button" name="button" class="btn btn-info btn-warning"><a href="/login" style="color:white;">Login to post to blog</a></button>
                     </div>
                 </div>
             </div>
@@ -34,16 +35,22 @@
                         </div>
                         <div  class="col-md-10 col-sm-9">
                             <h1><a ng-href="/details/{{b._id}}">{{b.title}}</a></h1>
-    <div class="row">
-        <div class="col-xs-9">
-            <p>{{b.post}}</p>
-            <p class="lead"><button class="btn btn-default">Read More</button></p>
+    <div class="row blogPost">
+        <div class="col-xs-9 pRow" ng-init="limit = 200; moreShown = false">
+            <p class="pStyle" >{{b.post | limitTo: limit}}</p>
+            <p ng-hide="text.length > limit" href ng-click="limit=text.length; moreShown = true" class="lead"><button ng-if="!moreShown"  class="btn btn-default">Read More</button></p>
+            <p ng-show="moreShown" href ng-click="limit= 200; moreShown = false" class="lead"><button ng-if="moreShown" class="btn btn-default">Read Less</button></p>
 
 
             <p ng-repeat="t in b.tag" class="pull-right"> <span ng-href="/tagCreate/{{b._id}}" class="label label-default">{{t.tagmessage}}</span></p>
 
-            <ul class="list-inline"><li><a href="#">{{b.dateCreated | date: short}}</a></li><li><a ng-href="/details/{{b._id}}"><i class="glyphicon glyphicon-comment"></i><span> </span><span>{{b.comments.length}}  </span>Comments</a></li></ul>
-            <span><a id="tag" ng-href="/tagCreate/{{b._id}}" class="label label-default">Add Tag</a> </span>
+
+            <ul class="list-inline">
+                <li><a href="#">{{b.dateCreated | date: short}}</a></li>
+                <li><a ng-href="/details/{{b._id}}"><i class="glyphicon glyphicon-comment"></i><span> </span><span>{{b.comments.length}}  </span>Comments</a></li>
+                <span><a id="tag" ng-href="/tagCreate/{{b._id}}" class="btn btn-xs btn-info btn-primary">Add Tag</a></span>
+            </ul>
+
         </div>
 
         <div class="col-xs-3"></div>
@@ -56,7 +63,41 @@
 
                     <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
 
+                </div><br><br><br>
+                <hr>
+                <div class="container" id="footer">
+                    <div class="row">
+                        <div class="col col-sm-12">
+
+                            <h1>Follow Us</h1>
+                            <div class="btn-group">
+                                <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+                                <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+                                <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
+
+                <hr>
+
+                <footer class="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="list-inline ">
+                                    <li><i class="icon-facebook icon-2x"></i></li>
+                                    <li><i class="icon-twitter icon-2x"></i></li>
+                                    <li><i class="icon-google-plus icon-2x"></i></li>
+                                    <li><i class="icon-pinterest icon-2x"></i></li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </footer>
             </div>
 
         </div><!--/col-12-->
@@ -66,37 +107,5 @@
 
 
 
-<div class="container" id="footer">
-    <div class="row">
-        <div class="col col-sm-12">
 
-            <h1>Follow Us</h1>
-            <div class="btn-group">
-                <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
-                <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
-                <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<hr>
-
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <ul class="list-inline">
-                    <li><i class="icon-facebook icon-2x"></i></li>
-                    <li><i class="icon-twitter icon-2x"></i></li>
-                    <li><i class="icon-google-plus icon-2x"></i></li>
-                    <li><i class="icon-pinterest icon-2x"></i></li>
-                </ul>
-
-            </div>
-
-        </div>
-    </div>
-</footer>
 </div>

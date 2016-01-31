@@ -8,7 +8,7 @@ namespace app.Controllers{
             this.UserService.login(this.user).then((res) => {
                 this.UserService.setToken(res.token);
                 this.UserService.setUser();
-                this.$location.path("/");
+                this.$location.path("/blog");
                 this.ngToast.success({
                     content: "Congrats you are now logged in succesfully!",
                     horizontalPosition:"right"
@@ -45,6 +45,7 @@ namespace app.Controllers{
             private UserService: app.Services.UserService,
             private $location: ng.ILocationService,
             private ngToast
+
                 ){
 
         }

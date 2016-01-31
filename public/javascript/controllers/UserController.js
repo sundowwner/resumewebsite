@@ -14,7 +14,7 @@ var app;
                 this.UserService.login(this.user).then(function (res) {
                     _this.UserService.setToken(res.token);
                     _this.UserService.setUser();
-                    _this.$location.path("/");
+                    _this.$location.path("/blog");
                     _this.ngToast.success({
                         content: "Congrats you are now logged in succesfully!",
                         horizontalPosition: "right"

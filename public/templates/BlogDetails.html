@@ -16,7 +16,7 @@
                     <div class="row">
                         <form role="form" ng-submit="vm.update()">
                             <div class="col-lg-9 regSign animated fadeInUp">
-                                <h2><span class="animated fadeInLeftBig">Please input your</span> <span class="animated fadeInRightBig">blog changes below</span></h2><br>
+                                <h2><span class="animated fadeInLeftBig" style="display:inline-block">Please input your</span> <span class="animated fadeInRightBig" style="display:inline-block">blog changes below</span></h2><br>
                                 <div class="form-group">
                                     <label>Title</label>
                                     <div class="input-group">
@@ -42,17 +42,17 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-9 animated fadeInUp regSign">
-                        <div ng-repeat="c in vm.blog.comments" class="regSign">
-                            <h3>Comments</h3>
-                            <p>Message: {{c.message}}</p>
+                    <div class="col-lg-9 animated fadeInUp ">
+                        <div ng-repeat="c in vm.blog.comments" class="n">
+                            <h4 class="cHead">Comments</h4>
+                            <p class="ctext"><em>{{c.message}}</em></p><br><br><br>
                             <p>By: {{c.createdBy.username}}</p>
                             <h6>Date: {{c.created | date : fulldate }}</h6>
                             <a ng-show="gc.status.username == c.createdBy.username" ng-href="/commentUpdate/{{c._id}}" class="btn  btn-info">Update</a>
                             <button type="button" ng-show="gc.status.username == c.createdBy.username" ng-click="vm.deleteComment(c)" class="btn btn-danger">Delete</button><br><br>
                         </div><br><br>
 
-                        <label><span class="animated fadeInLeftBig regSign">Please add your comments</span> <span class="animated fadeInRightBig">to this post</span></label>
+                        <label><span class="animated fadeInLeftBig regSign" style="display:inline-block">Please add your comments</span> <span class="animated fadeInRightBig" style="display:inline-block">to this post</span></label>
                         <form role="form" ng-submit="vm.addComment()">
                             <div class="form-group regSign">
                                 <div class="input-group">
