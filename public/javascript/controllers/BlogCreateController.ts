@@ -2,6 +2,7 @@
 namespace app.Controllers {
     export class BlogCreateController {
         public blog = {};
+        
 
 
         public createBlog() {

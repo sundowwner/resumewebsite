@@ -1,7 +1,7 @@
 'use strict';
 var App;
 (function (App) {
-    angular.module('app', ['ngRoute', 'ngResource', "ui.bootstrap", 'ngToast', "angularTrix", "wysiwyg.module", "textAngular"])
+    angular.module('app', ['ngRoute', 'ngResource', "ui.bootstrap", 'ngToast', "angularTrix", "wysiwyg.module", "textAngular", 'ngSanitize', "ckeditor"])
         .config(function ($routeProvider, $locationProvider, $httpProvider) {
         $routeProvider
             .when('/', {
@@ -46,7 +46,7 @@ var App;
         })
             .when("/contact", {
             templateUrl: "/templates/Contact.html",
-            controller: app.Controllers.ContactController,
+            controller: app.Controllers.ContactCreateController,
             controllerAs: "vm"
         })
             .when("/resume", {

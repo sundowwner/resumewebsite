@@ -7,7 +7,13 @@ var app;
             function ContactService($resource, $window) {
                 this.$resource = $resource;
                 this.$window = $window;
+                this.ContactResource = $resource("/contacts/:id", null, {
+                    "update": { method: "PUT" }
+                });
             }
+            ContactService.prototype.saveContact = function (contact) {
+                return this.ContactResource.save(contact).$promise;
+            };
             return ContactService;
         })();
         Services.ContactService = ContactService;

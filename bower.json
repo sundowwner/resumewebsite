@@ -25,6 +25,7 @@
     "angular-minieditor": "~1.0.1",
     "ngWig": "ng-wig#~2.3.3",
     "angular-trix": "~1.0.2",
-    "angular-wysiwyg": "~1.2.4"
+    "angular-wysiwyg": "~1.2.4",
+    "angular-ckeditor": "~1.0.3"
   }
 }

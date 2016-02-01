@@ -15,6 +15,7 @@ require('./models/users');
 require("./models/blogs");
 require("./models/comments");
 require("./models/tags");
+require("./models/contacts");
 require('./config/passport');
 
 
@@ -42,9 +43,11 @@ let userRoutes = require('./routes/userRoutes');
 let blogRoutes = require("./routes/blogRoutes");
 let commentRoutes = require("./routes/commentRoutes");
 let tagRoutes = require("./routes/tagRoutes");
+let contactRoutes = require("./routes/contactRoutes");
 app.use("/blogs", blogRoutes);
 app.use('/users', userRoutes);
 app.use("/tags", tagRoutes);
+app.use("/contacts", contactRoutes);
 app.use("/api/comments", commentRoutes);
 
 

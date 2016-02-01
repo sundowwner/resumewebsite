@@ -1,6 +1,6 @@
 'use strict';
 namespace App {
-  angular.module('app', ['ngRoute', 'ngResource',"ui.bootstrap",'ngToast',"angularTrix","wysiwyg.module","textAngular"])
+  angular.module('app', ['ngRoute', 'ngResource',"ui.bootstrap",'ngToast',"angularTrix","wysiwyg.module","textAngular",'ngSanitize',"ckeditor"])
   .config((
     $routeProvider: ng.route.IRouteProvider,
     $locationProvider: ng.ILocationProvider,
@@ -49,7 +49,7 @@ namespace App {
     })
     .when("/contact", {
         templateUrl: "/templates/Contact.html",
-        controller: app.Controllers.ContactController,
+        controller: app.Controllers.ContactCreateController,
         controllerAs: "vm"
     })
     .when("/resume", {
