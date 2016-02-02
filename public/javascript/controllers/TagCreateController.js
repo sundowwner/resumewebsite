@@ -23,7 +23,7 @@ var app;
                 });
             };
             return TagCreateController;
-        })();
+        }());
         Controllers.TagCreateController = TagCreateController;
         angular.module("app").controller("TagCreateController", TagCreateController);
     })(Controllers = app.Controllers || (app.Controllers = {}));

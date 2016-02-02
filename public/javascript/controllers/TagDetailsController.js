@@ -18,7 +18,7 @@ var app;
                 });
             };
             return TagDetailsController;
-        })();
+        }());
         Controllers.TagDetailsController = TagDetailsController;
         angular.module("app").controller("TagDetailsController", TagDetailsController);
     })(Controllers = app.Controllers || (app.Controllers = {}));

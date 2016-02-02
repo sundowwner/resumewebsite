@@ -15,7 +15,7 @@ var app;
                 return this.ContactResource.save(contact).$promise;
             };
             return ContactService;
-        })();
+        }());
         Services.ContactService = ContactService;
         angular.module("app").service("ContactService", ContactService);
     })(Services = app.Services || (app.Services = {}));

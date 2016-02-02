@@ -16,7 +16,7 @@ var app;
                 });
             };
             return BlogCreateController;
-        })();
+        }());
         Controllers.BlogCreateController = BlogCreateController;
         angular.module("app").controller("BlogCreateController", BlogCreateController);
     })(Controllers = app.Controllers || (app.Controllers = {}));

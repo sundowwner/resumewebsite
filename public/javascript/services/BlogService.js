@@ -26,7 +26,7 @@ var app;
                 return this.BlogResource.delete({ _id: blog._id }).$promise;
             };
             return BlogService;
-        })();
+        }());
         Services.BlogService = BlogService;
         angular.module("app").service("BlogService", BlogService);
     })(Services = app.Services || (app.Services = {}));

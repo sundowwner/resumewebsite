@@ -21,7 +21,7 @@ var app;
                 });
             };
             return ContactCreateController;
-        })();
+        }());
         Controllers.ContactCreateController = ContactCreateController;
         angular.module("app").controller("ContactCreateController", ContactCreateController);
     })(Controllers = app.Controllers || (app.Controllers = {}));

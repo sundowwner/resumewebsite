@@ -37,6 +37,7 @@ router.get("/:id", function (req, res, next) {
 });
 router.post("/", auth, function (req, res, next) {
     var newBlog = new Blog(req.body);
+    newBlog.dateCreated = new Date();
     newBlog.createdBy = req["payload"]._id;
     newBlog.save(function (err, blog) {
         if (err)

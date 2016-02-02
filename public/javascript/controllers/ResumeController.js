@@ -10,7 +10,7 @@ var app;
                 this.$routeParams = $routeParams;
             }
             return ResumeController;
-        })();
+        }());
         Controllers.ResumeController = ResumeController;
         angular.module("app").controller("ResumeController", ResumeController);
     })(Controllers = app.Controllers || (app.Controllers = {}));

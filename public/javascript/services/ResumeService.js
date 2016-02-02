@@ -8,7 +8,7 @@ var app;
                 this.$resource = $resource;
             }
             return ResumeService;
-        })();
+        }());
         Services.ResumeService = ResumeService;
         angular.module("app").service("ResumeService", ResumeService);
     })(Services = app.Services || (app.Services = {}));

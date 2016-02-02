@@ -23,7 +23,7 @@ var app;
                 return this.tagResource.delete({ _id: tagId }).$promise;
             };
             return TagService;
-        })();
+        }());
         Services.TagService = TagService;
         angular.module("app").service("TagService", TagService);
     })(Services = app.Services || (app.Services = {}));

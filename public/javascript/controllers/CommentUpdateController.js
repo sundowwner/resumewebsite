@@ -17,7 +17,7 @@ var app;
                 });
             };
             return CommentUpdateController;
-        })();
+        }());
         Controllers.CommentUpdateController = CommentUpdateController;
         angular.module("app").controller("CommentUpdateController", CommentUpdateController);
     })(Controllers = app.Controllers || (app.Controllers = {}));

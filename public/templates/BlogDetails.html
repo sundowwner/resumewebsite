@@ -3,7 +3,7 @@
         <div class="col-md-12">
             <div>
                 <h4>{{vm.blog.title}}</h4>
-                <h4>{{vm.blog.post}}</h4><br>
+                <h4 ng-bind-html="vm.blog.post"></h4><br>
                 <p>Post by: {{vm.blog.createdBy.username}}</p>
                 <h6>Blog Posted: {{vm.blog.dateCreated | date : fulldate }}</h6>
 
@@ -27,8 +27,7 @@
                                 <div class="form-group">
                                     <label>Post</label>
                                     <div class="input-group">
-                                        <textarea type="text" ng-model = "vm.blog.post" class="form-control"   placeholder="Post" rows="5"></textarea>
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                        <<text-angular ng-model="vm.blog.post"></text-angular>
                                     </div>
                                 </div>
                                 <input type="submit" name="submit" id="submit" value="Submit Changes" class="btn btn-info pull-right btn-block">

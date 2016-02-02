@@ -61,7 +61,7 @@ var app;
                 this.hide = true;
             };
             return BlogDetailsController;
-        })();
+        }());
         Controllers.BlogDetailsController = BlogDetailsController;
         angular.module("app").controller("BlogDetailsController", BlogDetailsController);
     })(Controllers = app.Controllers || (app.Controllers = {}));

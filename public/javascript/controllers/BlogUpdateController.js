@@ -11,7 +11,7 @@ var app;
                 this.blog = BlogService.getBlog($routeParams["id"]);
             }
             return BlogUpdateController;
-        })();
+        }());
         Controllers.BlogUpdateController = BlogUpdateController;
         angular.module("app").controller("BlogUpdateController", BlogUpdateController);
     })(Controllers = app.Controllers || (app.Controllers = {}));

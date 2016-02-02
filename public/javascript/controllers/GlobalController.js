@@ -13,7 +13,7 @@ var app;
                 this.UserService.removeUser();
             };
             return GlobalController;
-        })();
+        }());
         Controllers.GlobalController = GlobalController;
         angular.module("app").controller("GlobalController", GlobalController);
     })(Controllers = app.Controllers || (app.Controllers = {}));

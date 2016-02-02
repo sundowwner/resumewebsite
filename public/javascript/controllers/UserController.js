@@ -47,7 +47,7 @@ var app;
                 });
             };
             return UserController;
-        })();
+        }());
         Controllers.UserController = UserController;
         angular.module("app").controller("UserController", UserController);
     })(Controllers = app.Controllers || (app.Controllers = {}));

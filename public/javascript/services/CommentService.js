@@ -23,7 +23,7 @@ var app;
                 return this.commentResource.get({ id: commentId });
             };
             return CommentService;
-        })();
+        }());
         Services.CommentService = CommentService;
         angular.module("app").service("CommentService", CommentService);
     })(Services = app.Services || (app.Services = {}));

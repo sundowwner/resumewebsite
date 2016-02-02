@@ -11,7 +11,7 @@ var app;
                 this.blogs = BlogService.getAll();
             }
             return BlogController;
-        })();
+        }());
         Controllers.BlogController = BlogController;
         angular.module("app").controller("BlogController", BlogController);
     })(Controllers = app.Controllers || (app.Controllers = {}));

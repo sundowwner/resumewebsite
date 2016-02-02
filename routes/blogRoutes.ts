@@ -44,6 +44,7 @@ router.get("/:id", (req,res,next) => {
 //POST: /blogs
 router.post("/", auth, (req,res,next) => {
     let newBlog = new Blog(req.body);
+    newBlog.dateCreated = new Date();
     newBlog.createdBy = req["payload"]._id;
     newBlog.save((err,blog) => {
         if (err) return next(err);
