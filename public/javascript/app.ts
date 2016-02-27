@@ -8,7 +8,7 @@ namespace App {
 
     $routeProvider
     .when('/', {
-      templateUrl: '/templates/Home.html',
+      templateUrl: '/templates/home.html',
       controller: app.Controllers.HomeController,
       controllerAs: 'vm'
     })
