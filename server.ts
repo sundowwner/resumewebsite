@@ -22,8 +22,9 @@ require('./config/passport');
 // if (process.env.NODE_ENV === 'test')
 //   mongoose.connect("mongodb://localhost/bookStore-test");
 // else
-  mongoose.connect(process.env.MONGO_URL);
+  // mongoose.connect(process.env.MONGO_URL);
 
+mongoose.connect("mongodb://localhost/resume");
 
 // view engine setup
 app.set('views', './views');

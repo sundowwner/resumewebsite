@@ -42,6 +42,7 @@
             <p ng-bind-html="b.post | limitTo: limit" ></p>
             <!-- {{b.post | limitTo: limit}} -->
             <p ng-show="b.post.length > limit" href ng-click="limit=b.post.length; moreShown = true" class="lead"><button ng-if="!moreShown"  class="btn btn-default">Read More</button></p>
+
             <p ng-hide="!moreShown" href ng-click="limit= 250; moreShown = false" class="lead"><button ng-if="moreShown" class="btn btn-default">Read Less</button></p>
 
 

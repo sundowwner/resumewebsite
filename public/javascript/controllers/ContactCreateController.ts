@@ -5,7 +5,7 @@ namespace app.Controllers {
 
         public createContact() {
             this.ContactService.saveContact(this.contact).then((res) =>{
-                this.$location.path("/contact");
+                this.$location.path("/");
                 this.ngToast.success({
                     content: "Thanks for the message. We'll be in touch soon!",
                     horizontalPosition: "right"

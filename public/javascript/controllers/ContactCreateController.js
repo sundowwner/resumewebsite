@@ -13,7 +13,7 @@ var app;
             ContactCreateController.prototype.createContact = function () {
                 var _this = this;
                 this.ContactService.saveContact(this.contact).then(function (res) {
-                    _this.$location.path("/contact");
+                    _this.$location.path("/");
                     _this.ngToast.success({
                         content: "Thanks for the message. We'll be in touch soon!",
                         horizontalPosition: "right"
