@@ -1,5 +1,6 @@
 #body{
     background-image: url(/images/citylights.jpeg);
+    margin-top: 0px;
 }
 .pRow   {
     width: 90%;
@@ -11,8 +12,8 @@
 #blogBody,#blogDbody,#comBody{
 
     /*position: absolute;*/
-    width: 1170px;
-    margin-left: 368px;
+    width: 1200px;
+    /*margin-left: 368px;*/
     padding-bottom: 100px;
 }
 .regSign {
@@ -20,8 +21,8 @@
 }
 
 .panel{
-    width: 1170px;
-    margin-left: -31px;
+    width: 1200px;
+    margin-left: -30px;
     background-color: GhostWhite;
 }
 .ctext{
@@ -32,12 +33,16 @@
 .cHeader    {
     margin-top: -4px;
 }
-.panelTop{
-    width: 1170px;
-    margin-left: -16px;
+.panelTop {
+    width: 1200px;
+    margin-left: -15px;
     background-color: GhostWhite;
-
 }
+.contact    {
+    width: 1200px;
+    padding-bottom: 200px;
+}
+
 #tagC{
     position:absolute;
     margin-left: 668px;
@@ -103,13 +108,15 @@
 .pic{
     width: 255px;
     margin-left: -16px;
-    margin-top: -21px;
+    margin-top: 1px;
 }
 
 body    {
     background-image:url("citylights.jpeg");
     background-position: center;
     height: 2000px;
+    background-repeat: repeat-y;
+
     /*background-color: #8db5ad;*/
 }
 .nV {
@@ -126,8 +133,8 @@ body    {
 }
 .nVb    {
     margin-top: 60px;
-    width: 1173px;
-    margin-left: -31px;
+    width: 1204px;
+    margin-left: -45px;
 }
 .info   {
     margin-top: 18px;
@@ -152,6 +159,7 @@ body    {
     /*background-color: #263343;*/
     height: 320px;
     margin-top: -1px;
+
 }
 .custom a:hover {
     background-color: #30b94b;
@@ -180,10 +188,10 @@ body    {
 .jobTitle   {
     color: white;
     font-family: 'Lato', sans-serif;
-    font-size: 19.5px;
+    font-size: 21px;
     font-weight: bolder;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 484px;
+    margin-top: 51px;
 }
 .mainName   {
     font-family: 'Libre Baskerville', serif;
@@ -195,11 +203,11 @@ body    {
 }
 
 .greeting   {
-    background-color:#4dd2ff;
-    margin-top: 0px;
-    margin-left: -5px;
-    height:120px;
-    width:770px;
+    background-color: #4dd2ff;
+    margin-top: 10px;
+    margin-left: 15px;
+    height: 120px;
+    width: 770px;
     /*height: 140px;
     width:359px;
     margin-left:0px;
@@ -249,17 +257,27 @@ body    {
     margin-left: 5px;
 }
 
-
-
-
 .aboutP {
     font-family: arial;
     color: black;
     font-weight: lighter;
     font-size: 130%;
 }
-.synopsis, .resume  {
+.synopsis, .resume, .regInput,.logIn, .contact  {
     background-color: GhostWhite;
+}
+.resume {
+    width: 1200px;
+    margin-left: -30px;
+}
+.regInput {
+    width: 1200px;
+    padding-bottom:200px;
+}
+.logIn  {
+    width: 1200px;
+    margin-left: -30px;
+    padding-bottom:200px;
 }
 .sum    {
     margin-top: 35px;

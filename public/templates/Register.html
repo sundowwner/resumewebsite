@@ -1,6 +1,6 @@
 
-<div class="container">
-    <div class="row regInput movedown">
+<div class="container regInput">
+    <div class="row ">
         <h1 class="regSign"><span class="animated fadeInLeftBig" style="display:inline-block">You must</span> <span class="animated fadeInRightBig" style="display:inline-block">register below!</span></h1><br>
         <form role="form" ng-submit="vm.register()">
             <div class="col-lg-9 regSign animated fadeInUp">
@@ -35,7 +35,7 @@
                     </div>
                     <p ng-show="vm.user.password !== vm.user.cpassword" style="color:red">Passwords do not match!</p>
                 </div>
-                
+
 
                 <input type="submit" ng-disabled="vm.user.password !== vm.user.cpassword" name="submit" id="submit" value="Submit" class="subBt2 btn btn-info pull-right btn-block">
             </div>
