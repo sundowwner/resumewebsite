@@ -13,7 +13,7 @@ require("./models/comments");
 require("./models/tags");
 require("./models/contacts");
 require('./config/passport');
-mongoose.connect("mongodb://localhost/resume");
+mongoose.connect(process.env.MONGO_URL);
 app.set('views', './views');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');

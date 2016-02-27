@@ -24,7 +24,8 @@ require('./config/passport');
 // else
   // mongoose.connect(process.env.MONGO_URL);
 
-mongoose.connect("mongodb://localhost/resume");
+// mongoose.connect("mongodb://localhost/resume");
+mongoose.connect(process.env.MONGO_URL);
 
 // view engine setup
 app.set('views', './views');
