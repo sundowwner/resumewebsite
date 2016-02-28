@@ -42,19 +42,21 @@
     width: 1200px;
     padding-bottom: 200px;
 }
-
+#blogDet{
+    width: 1200px;
+    padding-bottom: 200px;
+}
+.tagcreate{
+    width: 1200px;
+    padding-bottom: 200px;
+}
 #tagC{
     position:absolute;
     margin-left: 668px;
 }
-   {
-    color: black;
-}
 .btn{
-
     font-weight: bold;
 }
-
 #movedowncomment{
     margin-left: 530px;
 }
@@ -263,7 +265,7 @@ body    {
     font-weight: lighter;
     font-size: 130%;
 }
-.synopsis, .resume, .regInput,.logIn, .contact, #blogDbody  {
+.synopsis, .resume, .regInput,.logIn, .contact, #blogDbody, #blogDet,.tagcreate  {
     background-color: GhostWhite;
 }
 .home{
