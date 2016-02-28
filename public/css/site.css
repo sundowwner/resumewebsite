@@ -263,8 +263,11 @@ body    {
     font-weight: lighter;
     font-size: 130%;
 }
-.synopsis, .resume, .regInput,.logIn, .contact  {
+.synopsis, .resume, .regInput,.logIn, .contact, #blogDbody  {
     background-color: GhostWhite;
+}
+.home{
+    padding-bottom: 150px;
 }
 .resume {
     width: 1200px;
